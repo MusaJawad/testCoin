@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Coin</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        #landing-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .enter-button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #main-content {
+            display: none;
+            text-align: center;
+        }
+        .icons {
+            margin-top: 20px;
+        }
+        .icons img {
+            margin: 0 10px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .contract-container {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px solid #000;
+            width: 300px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="landing-page">
+        <button class="enter-button" onclick="enterSite()">Enter to main site</button>
+    </div>
+
+    <div id="main-content">
+        <h1>DIOR CAT</h1>
+        <img src="Dior.jpg" alt="Dior Cat">
+        <div class="icons">
+            <a href="https://telegram.org/" target="_blank"><img src="Telegram.png" alt="Telegram"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="Twitter.png" alt="Twitter"></a>
+            <a href="https://dexscreener.com/" target="_blank"><img src="Dexscreener.png" alt="Dexscreener"></a>
+            <a href="https://pumpfun.com/" target="_blank"><img src="Pumpfun.png" alt="Pumpfun"></a>
+        </div>
+        <div class="contract-container">
+            <p>Solana Contract Address: YourSolanaContractAddressHere</p>
+        </div>
+        <audio id="background-music" autoplay>
+            <source src="yourfile.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        function enterSite() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            document.getElementById('background-music').play();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
