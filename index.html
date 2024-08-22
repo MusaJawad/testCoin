@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dior Cat</title>
     <style>
+        @font-face {
+            font-family: 'Frank_Knows';
+            src: url('Fiendish.ttf') format('truetype');
+        }
+
         body, html {
             height: 100%;
             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
+            background-color: #000;
+            font-family: 'Frank_Knows', Arial, sans-serif; /* Apply the custom font */
         }
         #landing-page {
             display: flex;
@@ -23,14 +28,22 @@
         .enter-button {
             padding: 20px 40px;
             font-size: 20px;
-            background-color: #000;
-            color: #fff;
+            background-color: #ffffff;
+            color: #000000;
             border: none;
             cursor: pointer;
         }
         #main-content {
             display: none;
             text-align: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('background2.jpg'); /* Replace with your GIF URL */
+            background-size: cover;
+            background-position: center;
         }
         .icons {
             margin-top: 20px;
@@ -41,31 +54,38 @@
             height: 50px;
             cursor: pointer;
         }
+
         .contract-container {
-            margin-top: 20px;
+            color: white;
             padding: 15px;
-            border: 2px solid #000;
-            width: 300px;
+            width: 1000px;
             word-wrap: break-word;
+            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
+
     </style>
 </head>
 <body>
+
     <div id="landing-page">
-        <button class="enter-button" onclick="enterSite()">Enter</button>
+        <button class="enter-button" onclick="enterSite()">Enter to smile</button>
     </div>
 
     <div id="main-content">
-        <h1>DIOR CAT</h1>
-        <img src="Dior.jpg" alt="Dior Cat">
+        <h1 style="color: #ffffff;">S M I L E</h1>
+        <!-- <img src="Dior.png" alt="Dior Cat"> -->
         <div class="icons">
-            <a href="https://telegram.org/" target="_blank"><img src="Telegram.png" alt="Telegram"></a>
+            <a href="https://telegram.org/" target="_blank"><img src="Telegram.webp" alt="Telegram"></a>
             <a href="https://twitter.com/" target="_blank"><img src="Twitter.png" alt="Twitter"></a>
             <a href="https://dexscreener.com/" target="_blank"><img src="Dexscreener.png" alt="Dexscreener"></a>
             <a href="https://pumpfun.com/" target="_blank"><img src="Pumpfun.png" alt="Pumpfun"></a>
         </div>
         <div class="contract-container">
-            <p>Solana Contract Address: YourSolanaContractAddressHere</p>
+            <p>Contract Address: YourSolanaContractAddressHere</p>
         </div>
         <audio id="background-music" autoplay>
             <source src="yourfile.mp3" type="audio/mpeg">
