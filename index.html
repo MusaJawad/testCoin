@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMILE</title>
+    <title>Diamond Hands</title>
     <style>
         @font-face {
             font-family: 'Frank_Knows';
-            src: url('it.ttf') format('truetype');
+            src: url('cloudy.ttf') format('truetype');
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importing Roboto font */
 
         body, html {
             height: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'Frank_Knows', Arial, sans-serif; /* Apply the custom font */
+            font-family: 'Frank_Knows', Arial, sans-serif;
             font-size: 50px;
-            background-image: url('/Images/background4.gif'); /* Replace with your GIF URL */
+            background-image: url('/Images/background1.png');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat; /* Ensure background doesn't repeat */
+            background-repeat: no-repeat;
         }
 
         #landing-page {
@@ -29,20 +31,83 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            position: absolute; /* Ensure it covers the entire viewport */
+            position: absolute;
             top: 0;
             left: 0;
         }
 
+        /* News Crawl Styles */
+        .news-crawl {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px; /* Increased height for better vertical alignment */
+            background-color: black; /* Solid black background */
+            color: white;
+            padding: 0; /* Remove padding */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            z-index: 20;
+            display: flex; /* Flexbox for vertical centering */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .news-crawl-content {
+            display: inline-block;
+            font-size: 40px;
+            color: rgb(116, 240, 240);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: 'Roboto', sans-serif;
+            white-space: nowrap;
+            animation: scroll-left 20s linear infinite;
+            /* No delay */
+        }
+
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
         .enter-button {
-            padding: 20px 40px;
-            font-size: 50px;
-            background-color: #ffffff;
-            color: #000000;
+            position: relative;
+            padding: 0;
             border: none;
+            background: none;
             cursor: pointer;
-            font-family: 'Frank_Knows', Arial, sans-serif; /* Apply the custom font */
-            z-index: 1; /* Ensure button is above background */
+            z-index: 1;
+        }
+
+        .enter-button img {
+            width: 300px;
+            height: auto;
+            display: block;
+        }
+
+        .enter-button p {
+            font-family: 'Frank_Knows', Arial, sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            font-size: 30px;
+
+            color: rgb(255, 255, 255);
+            text-shadow: 6px 6px 12px rgba(255, 0, 0, 0.8); /* Darker border effect */
         }
 
         #main-content {
@@ -53,9 +118,29 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-image: url('/Images/background3.png'); /* Replace with your GIF URL if needed */
+            background-image: url('/Images/background3.png');
             background-size: cover;
             background-position: center;
+        }
+
+        #exit-page {
+            display: none;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: black;
+            color: white; /* Ensure text is visible on black background */
+        }
+
+        #exit-page h1 {
+            font-family: 'Roboto', sans-serif; /* Same font as news ticker */
+            font-size: 60px; /* Adjust as needed */
+            color: white;
+            margin: 0;
+            padding: 20px; /* Adjust padding if necessary */
         }
 
         .icons {
@@ -81,31 +166,96 @@
             transform: translateX(-50%);
         }
 
+        h1 {
+            color: rgb(116, 240, 240);
+            text-shadow: 6px 6px 12px rgba(18, 70, 241, 0.8); /* Darker border effect */
+        }
+
+        /* Bottom Corner Images */
+        .corner-image {
+            position: fixed;
+            width: 20%; /* Increase the width */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 10;
+        }
+
+        .corner-image.bottom-left {
+            bottom: 0px;
+            left: 20px;
+            transform: scaleX(-1); /* Flip the image vertically */
+        }
+
+        .corner-image.bottom-right {
+            bottom: 0px;
+            right: 20px;
+        }
     </style>
 </head>
+
+
+
+
+
+
+
 <body>
 
+
+
     <div id="landing-page">
-        <button class="enter-button" onclick="enterSite()">Enter to smile</button>
+
+        <div class="news-crawl">
+            <div class="news-crawl-content">
+                $DIME is now live! | NO PAPER HANDS ALLOWED | $DIME is now live! | NO PAPER HANDS ALLOWED | $DIME is now live! | NO PAPER HANDS ALLOWED | $DIME is now live! | NO PAPER HANDS ALLOWED | $DIME is now live! | NO PAPER HANDS ALLOWED
+            </div>
+        </div>
+
+
+        <h1>Do you have Diamond Hands?</h1>
+        <div class="button-container">
+            <button class="enter-button" onclick="enterSite()">
+                <img src="/Images/diamond.png" alt="Do you have diamond hands?">
+                <p>Y E S</p>
+            </button>
+
+            <button class="enter-button" onclick="closeTab()">
+                <img src="/Images/diamond.png" alt="Do you have diamond hands?">
+                <p>N O</p>
+            </button>
+        </div>
+
+            <!-- Bottom Left and Right Corner Images -->
+            <img src="/Images/paw.png" class="corner-image bottom-left" alt="Left Corner Image">
+            <img src="/Images/paw.png" class="corner-image bottom-right" alt="Right Corner Image">
     </div>
 
     <div id="main-content">
-        <h1 style="color: #ffffff">S M I L E</h1>
-        <!-- <img src="Dior.png" alt="Dior Cat"> -->
+        <h1 style="color: rgb(116, 240, 240);">Dime is pleased to meet a fellow diamond hander</h1>
         <div class="icons">
-            <a href="https://t.me/solanasmile" target="_blank"><img src="/Images/Telegram.webp" alt="Telegram"></a>
+            <a href="https://t.me/solanasmile" target="_blank"><img src="/Images/Telegram.png" alt="Telegram"></a>
             <a href="https://x.com/smiledog_solana" target="_blank"><img src="/Images/twitter.png" alt="Twitter"></a>
             <a href="https://dexscreener.com/" target="_blank"><img src="/Images/dexscreener.png" alt="Dexscreener"></a>
             <a href="https://pump.fun/7wJqvVnAdVzEv7AKxCYAWxSuDh7CJzBmhbZYRXPSaeKC" target="_blank"><img src="/Images/pumpfun.png" alt="Pumpfuns"></a>
         </div>
         <div class="contract-container">
-            <p>Contract Address: 7wJqvVnAdVzEv7AKxCYAWxSuDh7CJzBmhbZYRXPSaeKC  </p>
+            <p>Contract Address: 7wJqvVnAdVzEv7AKxCYAWxSuDh7CJzBmhbZYRXPSaeKC</p>
         </div>
         <audio id="background-music" autoplay>
-            <source src="/Images/yourfile.mp3" type="audio/mpeg">
+            <source src="/Images/music.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
     </div>
+
+
+
+    <div id="exit-page">
+        <div class="exit-content">
+            <img src="/Images/alert.gif" class="alert-image left-alert" alt="Alert Left">
+            <h1>Paper hands detected. FUCK OFF</h1>
+            <img src="/Images/alert.gif" class="alert-image right-alert" alt="Alert Right">
+        </div>
+    </div>
+    
 
     <script>
         function enterSite() {
@@ -113,6 +263,24 @@
             document.getElementById('main-content').style.display = 'block';
             document.getElementById('background-music').play();
         }
+
+        function closeTab() {
+            document.getElementById('landing-page').style.display = 'none';
+            document.getElementById('exit-page').style.display = 'block';
+
+            // Wait 5 seconds before closing the tab
+            setTimeout(function() {
+                window.close();
+            }, 2000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+        var newsCrawlContent = document.querySelector('.news-crawl-content');
+        newsCrawlContent.style.animation = 'none'; // Disable animation
+        newsCrawlContent.offsetHeight; // Trigger reflow
+        newsCrawlContent.style.animation = ''; // Re-enable animation
+        });
+
     </script>
 </body>
 </html>
